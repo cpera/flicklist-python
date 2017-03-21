@@ -1,14 +1,16 @@
 import webapp2
+import random
 
 class Index(webapp2.RequestHandler):
 
     def getRandomMovie(self):
 
         # TODO: make a list with at least 5 movie titles
-
+		 mvList = ["God Father", "Titanic", "Legend", "Avatar", "2012"]		
         # TODO: randomly choose one of the movies, and return it
-
-        return "The Big Lebowski"
+		 randVal =random.randrange(0,5)
+		 randomMvPick = mvList[randVal]
+		 return randomMvPick # "The Big Lebowski"
 
     def get(self):
         # choose a movie by invoking our new function
