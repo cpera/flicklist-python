@@ -5,9 +5,22 @@
 
 <ul>
 {% for movie in movies %}
-    <li>
-        <h3>{{ movie }}</h3>
-
+    <li>        
+		<form method="post" action="/ratings">
+			<h3>{{ movie }}</h3>			
+			<input type=hidden name="rated-movie" value="{{movie}}"/>			
+			<label> My Rating </label>
+			<select name="user-movie-rating">
+				<option value="How-was-it"> How was it? </option>
+				<option value="*"> * </option>
+				<option value="**"> ** </option>
+				<option value="***"> *** </option>
+				<option value="****"> **** </option>
+				<option value="*****"> ***** </option>
+			</select>			
+			<input type=submit value="Rate-It" />
+			
+		</form>	
         <!--
         TODO 3
         Each of these list items should contain a form that submits to /ratings
