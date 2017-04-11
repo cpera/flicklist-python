@@ -13,6 +13,11 @@ indexes:
 - kind: Movie
   properties:
   - name: watched
+  - name: title
+
+- kind: Movie
+  properties:
+  - name: watched
   - name: created
 
 - kind: Movie
