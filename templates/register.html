@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" action="/register">
+	<label> Username: </label> <input type="text" name="username" />  <div> {{error.user_error}} </div> <br>
+	<label> Password: </label> <input type="password" name="password" /> <div> {{error.password_error}} </div> <br>
+	<label> Retype Password: </label> <input type="password" name="verify" /> <div> {{error.verify_error}} </div> <br>
+	<input type="submit"/>
+</form>
+
+{% endblock %}
